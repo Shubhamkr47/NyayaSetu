@@ -4,14 +4,14 @@
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Install dependencies
 ```bash
 npm install
 ```
 
-### 2. Set your Gemini API key (FREE)
+### 2. Set your Gemini API key
 
 Create a `.env` file in the root of the project:
 ```
@@ -19,7 +19,6 @@ VITE_GEMINI_API_KEY=your_api_key_here
 ```
 
 > Get your FREE API key from https://aistudio.google.com/app/apikey
-> No credit card required!
 
 ### 3. Run locally
 ```bash
@@ -50,7 +49,7 @@ vercel
 1. Push this project to a GitHub repo
 2. Go to https://vercel.com → New Project → Import your repo
 3. Add environment variable: `VITE_GEMINI_API_KEY` = your key
-4. Click Deploy ✅
+4. Click Deploy 
 
 ---
 
@@ -68,7 +67,7 @@ netlify deploy --build
 3. Build command: `npm run build`
 4. Publish directory: `dist`
 5. Add environment variable: `VITE_GEMINI_API_KEY` = your key
-6. Deploy ✅
+6. Deploy 
 
 ---
 
@@ -79,7 +78,7 @@ nyayasetu/
 ├── index.html
 ├── vite.config.js
 ├── package.json
-├── .env                    ← your API key (don't commit!)
+├── .env                    
 └── src/
     ├── main.jsx
     ├── App.jsx
@@ -141,13 +140,3 @@ Edit `src/data/cases.js` and add more entries following the same structure:
 ```
 
 ---
-
-## 🔐 Security Note
-
-- Never commit your `.env` file — it's already in `.gitignore`
-- For production, set environment variables in your Vercel/Netlify dashboard
-- The Gemini API key is used client-side for the Legal Chat feature (free tier: 15 requests/min)
-
----
-
-Built for **Hacksplosion 2026** — Deloitte GenW.AI Track
