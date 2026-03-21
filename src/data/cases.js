@@ -1,0 +1,98 @@
+export const CASES = [
+  {
+    id: 1,
+    name: 'Rajaram v. State of Maharashtra',
+    court: 'Bombay High Court',
+    year: '2023',
+    section: 'IPC §420, §406',
+    lang: 'mr',
+    langLabel: 'Marathi',
+    type: 'high',
+    tags: ['Cheating', 'Criminal Breach of Trust', 'Property'],
+    relevance: 96,
+    originalText: `न्यायालय: मुंबई उच्च न्यायालय\nप्रकरण क्रमांक: Criminal Appeal 2847/2023\n\nन्यायमूर्ती श्री. अनिल देशपांडे यांच्यासमोर\n\nप्रकरण: राजाराम देवकर विरुद्ध महाराष्ट्र राज्य\n\nतक्रारदाराने असे नमूद केले की, आरोपीने दिनांक 15 मार्च 2021 रोजी त्यांच्याकडून रु. 5,00,000/- एवढी रक्कम फसवणूक करून घेतली. आरोपीने सांगितले की, हे पैसे मुंबई-पुणे एक्सप्रेस वेवर जमिनीच्या खरेदीसाठी वापरले जातील. परंतु नंतर असे दिसून आले की, सदर जमीन अस्तित्वातच नव्हती.\n\nन्यायालयाने आरोपीची फसवणूकीची कृती सिद्ध मानली. भारतीय दंड संहितेच्या कलम ४२० अन्वये आरोपी दोषी आढळला. न्यायालयाने ३ वर्षे सश्रम कारावास आणि रु. १०,०००/- दंड असे शिक्षेचे आदेश दिले.\n\nतक्रारदाराचे नुकसान भरपाई देण्याचा आदेश देखील पारित करण्यात आला.`,
+    issues: [
+      'Whether fraudulent inducement to invest constitutes cheating under IPC §420',
+      'Whether land promised existed and was validly transferable',
+      'Quantum of punishment for first-time offender',
+    ],
+    sections: ['IPC §420', 'IPC §406', 'CrPC §357'],
+    reasoning:
+      'Court found that the accused made a fraudulent representation about non-existent land to obtain money. The essential elements of cheating — deception, inducement, and wrongful gain — were all established beyond reasonable doubt.',
+    verdict:
+      'Accused convicted under IPC §420. Sentenced to 3 years rigorous imprisonment with ₹10,000 fine. Compensation of ₹5,00,000 ordered to be paid to complainant under CrPC §357.',
+    confidence: 97,
+  },
+  {
+    id: 2,
+    name: 'Meenakshi Sundaram v. Tamil Nadu Housing Board',
+    court: 'Madras High Court',
+    year: '2022',
+    section: 'Land Acquisition Act §24',
+    lang: 'ta',
+    langLabel: 'Tamil',
+    type: 'high',
+    tags: ['Land Acquisition', 'Compensation', 'Housing'],
+    relevance: 88,
+    originalText: `நீதிமன்றம்: சென்னை உயர் நீதிமன்றம்\nவழக்கு எண்: WP 15234/2022\n\nமாண்புமிகு நீதிபதி திரு. கார்த்திகேயன் அவர்கள் முன்\n\nவழக்கு: மீனாட்சி சுந்தரம் எதிர் தமிழ்நாடு வீட்டுவசதி வாரியம்\n\nமனுதாரர் தனது 450 சதுர மீட்டர் நிலம் கையகப்படுத்தப்பட்டது குறித்து நீதிமன்றில் வழக்கு தொடர்ந்தார். வீட்டு வாரியம் வழங்கிய இழப்பீடு சந்தை மதிப்பை விட மிகவும் குறைவாக இருந்தது எனக் கூறினார்.\n\nநில கையகப்படுத்தல் சட்டம் 2013ன் பிரிவு 24ன் படி, 5 ஆண்டுகளுக்கு மேல் ஆனால் உடைமை வழங்கப்படவில்லை என்றால், கையகப்படுத்தல் செயல்பாடு காலாவதியாகும் எனக் கோரப்பட்டது.\n\nநீதிமன்றம் மனுதாரரின் கோரிக்கையை அனுமதித்தது. சந்தை மதிப்பின் மூன்று மடங்கு இழப்பீடு வழங்க உத்தரவிட்டது.`,
+    issues: [
+      'Whether acquisition lapsed under Land Acquisition Act 2013 §24(2)',
+      'Whether market value assessment was correct',
+      'Right to fair compensation under Article 300A',
+    ],
+    sections: ['LARR Act 2013 §24', 'Article 300A', 'LARR Act §26'],
+    reasoning:
+      'Since possession had not been taken even 5 years after declaration, the acquisition proceedings lapsed under §24(2). Market value at ₹4,500/sqm was established through government valuation records and comparable sales data.',
+    verdict:
+      'Acquisition declared lapsed. Alternative: if State wishes to re-acquire, compensation must be 3× market value = ₹60,75,000. Writ allowed in favour of petitioner.',
+    confidence: 94,
+  },
+  {
+    id: 3,
+    name: 'In Re: State of Kerala v. Krishnadas Nair',
+    court: 'Kerala High Court',
+    year: '2023',
+    section: 'NDPS Act §37',
+    lang: 'ml',
+    langLabel: 'Malayalam',
+    type: 'high',
+    tags: ['NDPS', 'Bail', 'Narcotics'],
+    relevance: 79,
+    originalText: `കോടതി: കേരള ഹൈക്കോടതി\nകേസ് നമ്പർ: Bail Appl. 3421/2023\n\nബഹുമാനപ്പെട്ട ജഡ്ജി ശ്രീ. സുനിൽ തോമസ് അവർകൾ\n\nകേസ്: കേരള സർക്കാർ vs കൃഷ്ണദാസ് നായർ\n\nഹർജിക്കാരൻ NDPS ആക്ട് സെക്ഷൻ 21(c) പ്രകാരം 2 കിലോഗ്രാം ഹെറോയിൻ കൈവശം വെച്ചതിന് അറസ്റ്റ് ചെയ്യപ്പെട്ടു. ജാമ്യം നൽകണമെന്ന ഹർജി ഉയർന്ന കോടതിയിൽ ദാഖൽ ചെയ്തു.\n\nNDPS ആക്ട് സെക്ഷൻ 37 പ്രകാരം, commercial quantity ആയ narcotic drugs ഉൾക്കൊള്ളുന്ന കേസുകളിൽ ജാമ്യം നൽകുന്നതിന് dual test ബാധകമാണ്. ജഡ്ജി ഹർജി തള്ളി.`,
+    issues: [
+      'Applicability of twin conditions under NDPS §37 for bail',
+      'Whether commercial quantity threshold was correctly determined',
+      'Right to bail vs public interest in drug cases',
+    ],
+    sections: ['NDPS Act §21(c)', 'NDPS Act §37', 'CrPC §439'],
+    reasoning:
+      'Bail under NDPS §37 requires twin satisfaction: (1) reasonable grounds for believing accused is not guilty, and (2) no likelihood of further offence. With 2kg heroin — well above commercial quantity — neither condition was met.',
+    verdict:
+      'Bail application rejected. Accused to remain in judicial custody. Liberty to reapply after 6 months or upon change of circumstances.',
+    confidence: 91,
+  },
+  {
+    id: 4,
+    name: 'Sunita Devi v. Ramesh Kumar',
+    court: 'Delhi High Court',
+    year: '2023',
+    section: 'Domestic Violence Act §12',
+    lang: 'hi',
+    langLabel: 'Hindi',
+    type: 'high',
+    tags: ['Domestic Violence', 'Protection Order', 'Maintenance'],
+    relevance: 85,
+    originalText: `न्यायालय: दिल्ली उच्च न्यायालय\nप्रकरण संख्या: MAT APP 1187/2023\n\nमाननीय न्यायाधीश श्रीमती प्रिया शर्मा\n\nप्रकरण: सुनीता देवी बनाम रमेश कुमार\n\nअपीलकर्ता ने बताया कि उसके पति और ससुराल वालों ने उसके साथ मानसिक और शारीरिक दोनों तरह से घरेलू हिंसा की। घरेलू हिंसा अधिनियम 2005 की धारा 12 के तहत संरक्षण आदेश की मांग की गई।\n\nमजिस्ट्रेट द्वारा दिए गए आदेश को चुनौती दी गई जिसमें केवल ₹3,000 प्रति माह भरण-पोषण दिया गया था। उच्च न्यायालय ने पाया कि यह राशि बिल्कुल अपर्याप्त है।\n\nन्यायालय ने भरण-पोषण राशि बढ़ाकर ₹15,000 प्रति माह कर दी और सख्त संरक्षण आदेश जारी किया।`,
+    issues: [
+      'Adequacy of maintenance quantum under DV Act',
+      'Scope of protection order under §18',
+      'Whether in-laws can be named as respondents',
+    ],
+    sections: ['DV Act §12', 'DV Act §18', 'DV Act §20', 'DV Act §22'],
+    reasoning:
+      'Maintenance must reflect actual needs and husband\'s financial capacity. ₹3,000/month grossly inadequate given husband\'s income of ₹80,000/month. In-laws who participated in domestic violence can be named as respondents.',
+    verdict:
+      'Appeal allowed. Maintenance enhanced to ₹15,000/month. Protection order against husband AND in-laws. Husband to vacate the shared household for 90 days.',
+    confidence: 89,
+  },
+]

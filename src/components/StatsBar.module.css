@@ -1,0 +1,21 @@
+.statsBar {
+  background: var(--navy);
+  padding: 8px 24px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.stat strong {
+  color: white;
+  font-size: 13px;
+}
