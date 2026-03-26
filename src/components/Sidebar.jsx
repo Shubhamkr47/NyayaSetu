@@ -9,11 +9,12 @@ const FILTERS = [
   { label: 'District', value: 'district' },
 ]
 
-export default function Sidebar({ activeCase, onSelectCase }) {
+export default function Sidebar({ activeCase, onSelectCase, extraCases = [] }) {
   const [search, setSearch] = useState('')
   const [filter, setFilter] = useState('all')
 
-  const filtered = CASES.filter((c) => {
+  const allCases = [...extraCases, ...CASES]
+  const filtered = allCases.filter((c) => {
     const matchesFilter = filter === 'all' || c.type === filter
     const q = search.toLowerCase()
     const matchesSearch =

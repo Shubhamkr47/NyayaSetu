@@ -4,25 +4,9 @@ import Sidebar from './components/Sidebar'
 import SplitView from './components/SplitView'
 import Chat from './components/Chat'
 import StatsBar from './components/StatsBar'
+import UploadPage from './components/UploadPage'
+import { CASES } from './data/cases'
 import styles from './App.module.css'
-
-function UploadPage() {
-  return (
-    <div className={styles.emptyState}>
-      <div className={styles.emptyIcon}>📤</div>
-      <div className={styles.emptyTitle}>Upload Judgment</div>
-      <div className={styles.emptyText}>
-        Upload a court judgment PDF or text file in any Indian language. Our AI will automatically translate, extract, and index it into the case library.
-      </div>
-      <div style={{ marginTop: 24, padding: '32px', border: '2px dashed #E2DDD5', borderRadius: 12, width: '100%', maxWidth: 480, textAlign: 'center', cursor: 'pointer', background: '#FAF7F2' }}>
-        <div style={{ fontSize: 36, marginBottom: 10 }}>📄</div>
-        <div style={{ fontSize: 14, color: '#6B6355' }}>Drag & drop a PDF or text file here</div>
-        <div style={{ fontSize: 12, color: '#6B6355', marginTop: 6 }}>Supports: PDF, TXT, DOCX · All 22 Indian languages</div>
-        <button className={styles.emptyAction} style={{ marginTop: 16 }}>Browse Files</button>
-      </div>
-    </div>
-  )
-}
 
 function AnalyticsPage() {
   const stats = [
@@ -73,6 +57,9 @@ export default function App() {
   const [activeNav, setActiveNav] = useState('Research')
   const [activeTab, setActiveTab] = useState('split')
   const [activeCase, setActiveCase] = useState(null)
+  const [extraCases, setExtraCases] = useState([])
+
+  const allCases = [...CASES, ...extraCases]
 
   function handleSelectCase(c) {
     setActiveCase(c)
@@ -101,20 +88,23 @@ export default function App() {
     setActiveTab('split')
   }
 
+  function handleCaseAdded(newCase) {
+    setExtraCases((prev) => [newCase, ...prev])
+  }
+
   const TABS = [
     { id: 'split', label: '📄 Split View' },
     { id: 'chat', label: '💬 Legal Chat' },
     { id: 'compare', label: '⚖️ Compare Cases' },
   ]
 
-  // Show Upload or Analytics pages when those nav items are active
   if (activeNav === 'Upload Judgment') {
     return (
       <div className={styles.appShell}>
         <Header activeNav={activeNav} onNavChange={setActiveNav} />
         <div className={styles.body}>
-          <main className={styles.main}>
-            <UploadPage />
+          <main className={styles.main} style={{ overflowY: 'auto' }}>
+            <UploadPage onCaseAdded={(c) => { handleCaseAdded(c); setActiveNav('Research'); setActiveCase(c); setActiveTab('split') }} />
           </main>
         </div>
       </div>
@@ -138,7 +128,7 @@ export default function App() {
     <div className={styles.appShell}>
       <Header activeNav={activeNav} onNavChange={setActiveNav} />
       <div className={styles.body}>
-        <Sidebar activeCase={activeCase} onSelectCase={handleSelectCase} />
+        <Sidebar activeCase={activeCase} onSelectCase={handleSelectCase} extraCases={extraCases} />
         <main className={styles.main}>
           <div className={styles.tabs}>
             {TABS.map((t) => (
